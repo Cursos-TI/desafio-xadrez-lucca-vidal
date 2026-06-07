@@ -7,6 +7,7 @@ int main() {
     int bispo = 0;
     int rainha = 0;
     int torre = 0;
+    int cavalo = 0;
     int contagem = 1;//contagem de passos dados 
 
     //estrutura de while (movimentação da rainha)
@@ -41,5 +42,23 @@ int main() {
     contagem++;//é adicionado 1 a variável "contagem"
     bispo++;//é adicionado 1 a variável "bispo"
    } while (bispo < 5);//o loop será executado enquanto a variável "bispo" for menor que 5
+
+   contagem = 1;//reseta o valor de "contagem" para ser usado na próxima estrutura
    
+   
+    printf("\n----MOVIMENTAÇÃO CAVALO---- \n\n");
+   for (cavalo; cavalo < 1; cavalo++)//loop externo, responsavel por mover o cavalo para direita
+    {
+        int i = 0;//declaração da variável "i" que será responsavel por mover o cavalo para cima
+         while (i <= 1)//loop interno, responsavel por mover o cavalo para cima
+     {
+        printf("%d: cima\n", contagem);//vai printar a mensagem "cima" indicando quantas vezes o cavalo foi para cima
+        i++;//incrementação de 1 para a variável "i" para impedir liip infinito
+        contagem++;//aumento da contagem de passos
+     }
+    contagem = 1;//reseta o valor de "contagem" para ser usado no próximo print
+    printf("%d: direita\n", contagem);//print da quantidade de vezes que o cavalo foi para a direita
+   }
+   
+return 0;   
 }
